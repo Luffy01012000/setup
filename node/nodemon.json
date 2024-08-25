@@ -1,0 +1,17 @@
+{
+    "watch": [
+        "src",
+        "/"
+    ],
+    "ext": "js,json,ts",
+    "ignore": [
+        "scr/**/*.test.ts",
+        "dist/*",
+        "build/*"
+    ],
+    "delay": "3000",
+    "exec": "pnpm ts-node ./src/index.ts",
+    "execMap": {
+        "ts": "ts-node"
+    }
+}
