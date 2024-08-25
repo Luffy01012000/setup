@@ -1,0 +1,15 @@
+{
+    "watch": [
+        "src",
+        "/"
+    ],
+    "ext": "js,json,ts",
+    "ignore": [
+        "scr/**/*.test.ts"
+    ],
+    "delay": "3000",
+    "exec": "pnpx ts-node ./src/main.ts",
+    "execMap": {
+        "ts": "ts-node"
+    }
+}

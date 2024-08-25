@@ -1,0 +1,32 @@
+{
+  "name": "esbuild",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:ts-node": "nodemon",
+    "build:esbuild": "node build.mjs",
+    "start:esbuild": "node serve.mjs",
+    "start:concurrent": "concurrently \"pnpm analyze:esbuild\" \"pnpm build:esbuild\" ",
+    "start": "pnpm start:concurrent && node dist/bundle.js",
+    "analyze:esbuild": "node analyze.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.5.0",
+    "concurrently": "^8.2.2",
+    "esbuild": "^0.23.1",
+    "esbuild-plugin-tsc": "^0.4.0",
+    "husky": "^9.1.5",
+    "lint-staged": "^15.2.9",
+    "nodemon": "^3.1.4",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "tslib": "^2.7.0"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "webpackbundler",
+  "version": "1.0.0",
+  "description": "learning about bundler",
+  "main": "index.js",
+  "engines": {
+    "node": "20.x.x",
+    "npm": "10.x.x",
+    "pnpm": "9.x.x"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js --color --progress",
+    "dev": "webpack serve ",
+    "watch": "webpack --watch --hot ",
+    "prepare": "husky install",
+    "lint": ""
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "esbuild-loader": "^4.2.2",
+    "husky": "^9.1.5",
+    "lint-staged": "^15.2.9",
+    "prettier": "^3.3.3",
+    "sass": "^1.77.8",
+    "sass-loader": "^16.0.1",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.94.0",
+    "webpack-bundle-analyzer": "^4.10.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
+  }
+}

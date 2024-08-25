@@ -1,0 +1,24 @@
+name: Run playwright Tests
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2 # get the code from repo to container
+      - uses: actions/setup-node@v2 # install node
+        with: # specify node version
+          node-version: 20
+      - run: npm ci
+      - run: npx playwright install --with-deps
+      - run: npx playwright test
+      - uses: actions/uploads-artifact@v3 # to get report of action
+        if: always()
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30
